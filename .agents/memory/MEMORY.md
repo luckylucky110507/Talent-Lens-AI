@@ -1,0 +1,1 @@
+- [Python test runner](python-test-runner.md) — the base Python 3.13 environment blocks pip installs, so keep a dependency-free test command available.

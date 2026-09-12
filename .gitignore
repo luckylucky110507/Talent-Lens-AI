@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+.venv/
+node_modules/
+frontend/dist/
+models/*.joblib
+models/*.json
+uploads/*
+!uploads/.gitkeep
+.pytest_cache/
+.DS_Store

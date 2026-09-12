@@ -1,0 +1,1425 @@
+Build a complete, fully functional, advanced final-year B.Tech CSE project named:
+
+                    TALENTLENS AI
+
+Tagline:
+"AI-Powered Resume Intelligence & Career Matching Platform"
+
+IMPORTANT:
+This is an advanced academic AI/ML project for a final-year B.Tech CSE student targeting AI/ML Engineer and Data Science roles.
+
+The project must NOT be a basic CRUD application or a simple resume parser.
+
+Build a complete end-to-end working application combining:
+
+Python
+NLP
+Machine Learning
+Deep Learning (ANN)
+Feature Engineering
+TF-IDF
+Cosine Similarity
+Resume Parsing
+ATS Analysis
+Skill Gap Analysis
+Candidate Ranking
+Career Recommendation
+Interview Preparation
+FastAPI
+React
+Tailwind CSS
+SQLite
+SQLAlchemy
+Data Visualization
+
+DO NOT use:
+- OpenAI API
+- paid APIs
+- RAG
+- LLM APIs
+- LangChain
+- Vector databases
+- Multi-agent systems
+
+Those are future enhancements and must NOT be part of this version.
+
+The current version should be completely functional without external AI API keys.
+
+========================================================
+1. TECHNOLOGY STACK
+========================================================
+
+FRONTEND:
+- React
+- Vite
+- Tailwind CSS
+- Lucide React
+- Recharts
+
+BACKEND:
+- Python
+- FastAPI
+- Uvicorn
+
+DATA/ML:
+- NumPy
+- Pandas
+- Scikit-learn
+- TensorFlow/Keras
+- NLTK
+- Joblib
+
+DOCUMENT PROCESSING:
+- pdfplumber or PyPDF2
+- python-docx
+
+DATABASE:
+- SQLite
+- SQLAlchemy
+
+DEPLOYMENT:
+- Replit-compatible
+- Environment variables where necessary
+- Backend must listen on 0.0.0.0
+- Use PORT environment variable
+
+========================================================
+2. PROJECT OBJECTIVE
+========================================================
+
+TalentLens AI is an intelligent recruitment and career analysis platform.
+
+A candidate uploads a resume and enters a Job Description.
+
+The system should:
+
+1. Parse the resume
+2. Extract important information
+3. Perform NLP preprocessing
+4. Extract technical skills
+5. Analyze ATS compatibility
+6. Compare resume with job description
+7. Calculate TF-IDF similarity
+8. Calculate cosine similarity
+9. Identify matched skills
+10. Identify missing skills
+11. Calculate skill-gap score
+12. Predict candidate suitability using Machine Learning
+13. Predict suitability using ANN
+14. Rank candidates for recruiters
+15. Recommend suitable career roles
+16. Generate interview questions from a local intelligent question bank
+17. Display everything in a professional analytics dashboard
+
+========================================================
+3. USER ROLES
+========================================================
+
+Create two modes:
+
+A. CANDIDATE MODE
+B. RECRUITER MODE
+
+Candidate can:
+- Upload resume
+- Enter job description
+- Analyze resume
+- View ATS score
+- View skill match
+- View missing skills
+- View career recommendations
+- Practice interview questions
+
+Recruiter can:
+- Enter job description
+- Upload multiple resumes
+- Analyze candidates
+- Rank candidates
+- Compare candidates
+- View candidate analytics
+
+Authentication is optional for V1.
+Do NOT spend unnecessary time implementing complex authentication.
+
+========================================================
+4. LANDING PAGE
+========================================================
+
+Create a premium modern landing page.
+
+Brand:
+
+TalentLens AI
+
+Subtitle:
+
+"Intelligent Recruitment. Smarter Careers."
+
+Sections:
+
+Hero
+Features
+How It Works
+AI/ML Technology
+Recruiter Benefits
+Candidate Benefits
+Project Architecture
+Footer
+
+Hero CTA:
+
+"Analyze My Resume"
+
+Secondary CTA:
+
+"Recruiter Dashboard"
+
+Use modern cards, icons and subtle animations.
+
+Do not make it overly flashy.
+
+========================================================
+5. RESUME UPLOAD
+========================================================
+
+Allow:
+
+PDF
+DOCX
+
+Upload area should have drag-and-drop support.
+
+Show:
+
+File name
+File type
+File size
+Upload status
+Remove file button
+
+Validate:
+- File type
+- File size
+- Empty file
+
+Show friendly error messages.
+
+========================================================
+6. RESUME PARSER
+========================================================
+
+Create:
+
+backend/services/resume_parser.py
+
+Extract:
+
+- Name
+- Email
+- Phone
+- Education
+- Experience
+- Skills
+- Projects
+- Certifications
+- Summary
+
+Use real document parsing.
+
+Do NOT hardcode candidate information.
+
+If a field cannot be detected:
+
+"Not detected"
+
+The application must not crash when resume formatting is unusual.
+
+========================================================
+7. NLP PIPELINE
+========================================================
+
+Create:
+
+backend/services/nlp_processor.py
+
+Implement:
+
+1. Lowercasing
+2. Text cleaning
+3. Punctuation removal
+4. Tokenization
+5. Stopword removal
+6. Lemmatization
+7. Whitespace normalization
+
+Pipeline:
+
+Raw Resume
+     ↓
+Cleaning
+     ↓
+Tokenization
+     ↓
+Stopword Removal
+     ↓
+Lemmatization
+     ↓
+Processed Text
+
+Create a UI section called:
+
+"NLP Processing Pipeline"
+
+Explain each step briefly.
+
+========================================================
+8. SKILL EXTRACTION
+========================================================
+
+Create:
+
+backend/services/skill_extractor.py
+
+Create a structured skills dictionary.
+
+Include at minimum:
+
+PROGRAMMING:
+Python
+Java
+C
+C++
+JavaScript
+
+DATA:
+SQL
+Pandas
+NumPy
+Excel
+Power BI
+Tableau
+
+MACHINE LEARNING:
+Machine Learning
+Regression
+Classification
+Linear Regression
+Logistic Regression
+Decision Tree
+Random Forest
+KNN
+SVM
+Naive Bayes
+XGBoost
+Gradient Boosting
+Clustering
+K-Means
+DBSCAN
+PCA
+
+DEEP LEARNING:
+ANN
+Artificial Neural Network
+CNN
+RNN
+TensorFlow
+PyTorch
+
+NLP:
+NLP
+Natural Language Processing
+TF-IDF
+Text Classification
+Tokenization
+Sentiment Analysis
+
+GENAI:
+LLM
+RAG
+Generative AI
+Prompt Engineering
+
+IMPORTANT:
+The skill dictionary may contain GenAI skills for detecting them in uploaded resumes, but DO NOT implement GenAI/RAG/LLM functionality in this version.
+
+DEVELOPMENT:
+HTML
+CSS
+React
+FastAPI
+Flask
+Git
+GitHub
+
+DATABASE:
+MySQL
+PostgreSQL
+MongoDB
+SQLite
+
+CLOUD:
+AWS
+Azure
+Google Cloud
+
+OTHER:
+DSA
+Data Structures
+Algorithms
+
+Extract skills from:
+- Resume
+- Job Description
+
+Display:
+
+Candidate Skills
+Required Skills
+Matched Skills
+Missing Skills
+Additional Skills
+
+========================================================
+9. JOB DESCRIPTION ANALYSIS
+========================================================
+
+Create a Job Description input page.
+
+Allow user to:
+
+Paste Job Description
+
+Extract:
+
+- Required skills
+- Preferred skills
+- Experience requirements
+- Education requirements
+- Role title
+- Important keywords
+
+Analyze the JD using the same NLP pipeline.
+
+========================================================
+10. TF-IDF
+========================================================
+
+Implement real TF-IDF.
+
+Use:
+
+TfidfVectorizer
+
+Create:
+
+backend/services/similarity.py
+
+Convert:
+
+Resume text → TF-IDF vector
+Job Description → TF-IDF vector
+
+Explain:
+
+TF-IDF identifies important terms based on their frequency and uniqueness.
+
+Do NOT hardcode the similarity score.
+
+========================================================
+11. COSINE SIMILARITY
+========================================================
+
+Implement:
+
+Cosine Similarity =
+(A · B) / (||A|| × ||B||)
+
+Use:
+
+sklearn.metrics.pairwise.cosine_similarity
+
+Return:
+
+Resume-JD Similarity Score
+
+Example:
+
+78.4%
+
+Round only for display.
+
+Show a small explanation in the UI.
+
+========================================================
+12. SKILL MATCHING
+========================================================
+
+Calculate:
+
+Skill Match % =
+Matched Required Skills / Total Required Skills × 100
+
+Show:
+
+Matched:
+Python
+SQL
+Machine Learning
+
+Missing:
+TensorFlow
+Docker
+NLP
+
+Additional:
+Power BI
+Excel
+
+Create priority:
+
+HIGH
+MEDIUM
+LOW
+
+Priority should be based on importance/frequency in the job description.
+
+========================================================
+13. ATS SCORE
+========================================================
+
+Create:
+
+backend/services/ats_scorer.py
+
+ATS score must be calculated using real features.
+
+Use this transparent weighted formula:
+
+ATS Score =
+35% Skill Match
++
+25% Keyword Match
++
+20% Resume-JD Similarity
++
+10% Section Completeness
++
+10% Project/Certification Relevance
+
+Normalize between 0 and 100.
+
+Display:
+
+ATS Score
+Skill Match
+Keyword Match
+Similarity
+Section Completeness
+Project/Certification Score
+
+Use a circular score indicator.
+
+========================================================
+14. ATS RECOMMENDATIONS
+========================================================
+
+Generate recommendations based on actual analysis.
+
+Examples:
+
+"Add missing technical keywords from the job description."
+
+"Your resume has strong skill alignment."
+
+"Add measurable outcomes to project descriptions."
+
+"Consider adding relevant certifications."
+
+"Improve project relevance for this role."
+
+Do not generate random recommendations.
+
+========================================================
+15. MACHINE LEARNING MODEL
+========================================================
+
+Create an actual ML candidate suitability model.
+
+Create a synthetic/demo training dataset inside:
+
+data/candidate_training_data.csv
+
+Generate at least 1000 realistic synthetic records.
+
+Features:
+
+skill_match
+keyword_match
+resume_jd_similarity
+experience_score
+education_score
+project_relevance
+certification_score
+ats_score
+
+Target:
+
+candidate_suitable
+
+Use:
+
+RandomForestClassifier
+
+Perform:
+
+Train-test split
+
+Feature preprocessing
+
+Model training
+
+Prediction
+
+Evaluation
+
+Calculate:
+
+Accuracy
+Precision
+Recall
+F1 Score
+ROC-AUC
+
+Do NOT hardcode metrics.
+
+Save model using Joblib.
+
+Files:
+
+backend/ml/train_model.py
+backend/ml/random_forest_model.py
+backend/ml/predict.py
+
+========================================================
+16. MODEL EVALUATION PAGE
+========================================================
+
+Create:
+
+/model-performance
+
+Display:
+
+Accuracy
+Precision
+Recall
+F1 Score
+ROC-AUC
+
+Also display:
+
+Confusion Matrix
+
+and
+
+Feature Importance chart.
+
+Explain why each metric is useful.
+
+========================================================
+17. ANN DEEP LEARNING MODEL
+========================================================
+
+Create a real ANN using TensorFlow/Keras.
+
+Use features:
+
+skill_match
+keyword_match
+resume_jd_similarity
+experience_score
+education_score
+project_relevance
+certification_score
+ats_score
+
+Architecture:
+
+Input Layer
+↓
+Dense(32, activation='relu')
+↓
+Dense(16, activation='relu')
+↓
+Dense(8, activation='relu')
+↓
+Dense(1, activation='sigmoid')
+
+Compile:
+
+Optimizer:
+Adam
+
+Loss:
+Binary Crossentropy
+
+Metrics:
+Accuracy
+
+Train using the same synthetic/demo dataset.
+
+Use validation split.
+
+Save model.
+
+Files:
+
+backend/ml/ann_model.py
+backend/ml/ann_predict.py
+
+Return:
+
+ANN Suitability Probability
+
+Example:
+
+87%
+
+Also classify:
+
+HIGH POTENTIAL
+MODERATE POTENTIAL
+LOW POTENTIAL
+
+IMPORTANT:
+Clearly display:
+
+"ANN prediction is a prototype academic model trained on synthetic/demo data and must not be used as the sole basis for real hiring decisions."
+
+========================================================
+18. CANDIDATE OVERALL SCORE
+========================================================
+
+Create:
+
+Overall Candidate Score
+
+Formula:
+
+40% Skill Match
+25% Resume-JD Similarity
+15% ATS Score
+10% Project Relevance
+10% ANN Suitability
+
+Do NOT use the model output alone.
+
+Display:
+
+Overall Score: 84/100
+
+Category:
+
+Excellent Match
+Good Match
+Moderate Match
+Low Match
+
+========================================================
+19. RECRUITER DASHBOARD
+========================================================
+
+Create:
+
+/recruiter
+
+Allow recruiter to upload multiple resumes.
+
+Input:
+
+Job Description
+
+Multiple candidate resumes.
+
+Analyze all candidates.
+
+Create ranking table:
+
+Rank
+Candidate
+ATS Score
+Skill Match
+Similarity
+ANN Suitability
+Overall Score
+Missing Skills
+
+Sort by Overall Score descending.
+
+Allow:
+
+View Details
+Compare
+Download Report
+
+========================================================
+20. CANDIDATE COMPARISON
+========================================================
+
+Create a comparison page.
+
+Compare 2–5 candidates.
+
+Show:
+
+ATS Score
+Skill Match
+Similarity
+ANN Probability
+Project Relevance
+Missing Skills
+Overall Score
+
+Use charts where useful.
+
+========================================================
+21. CAREER RECOMMENDATION ENGINE
+========================================================
+
+Create:
+
+backend/services/career_recommender.py
+
+Roles:
+
+AI/ML Engineer
+Machine Learning Intern
+Data Scientist
+Data Analyst
+Data Science Intern
+Python Developer
+NLP Engineer
+ML Engineer
+Business/Data Analyst
+
+For each role calculate a match score based on skill overlap.
+
+Show:
+
+Role
+Match %
+Matching Skills
+Missing Skills
+Recommended Skills
+
+Example:
+
+AI/ML Engineer
+91%
+
+Strong skills:
+Python
+Machine Learning
+Scikit-learn
+SQL
+
+Missing:
+TensorFlow
+Docker
+
+Recommended:
+TensorFlow
+Model Deployment
+Docker
+
+========================================================
+22. INTERVIEW PREPARATION
+========================================================
+
+Do NOT use an LLM.
+
+Create:
+
+data/interview_questions.json
+
+Include a large question bank.
+
+Categories:
+
+Python
+SQL
+Machine Learning
+NLP
+Deep Learning
+Data Analytics
+Statistics
+HR
+
+Difficulty:
+
+Easy
+Medium
+Hard
+
+Questions should be technically meaningful.
+
+Based on detected candidate skills and job description, select relevant questions.
+
+Example ML questions:
+
+What is overfitting?
+What is underfitting?
+What is the difference between precision and recall?
+Why is feature scaling required?
+What is Random Forest?
+What is bagging?
+What is cosine similarity?
+What is TF-IDF?
+
+ANN:
+
+What is an artificial neural network?
+What is a neuron?
+Why is ReLU used?
+What is sigmoid?
+What is backpropagation?
+What is an optimizer?
+What is binary cross entropy?
+
+Python:
+
+What is list comprehension?
+List vs tuple?
+What is a dictionary?
+What is exception handling?
+
+SQL:
+
+WHERE vs HAVING?
+INNER JOIN vs LEFT JOIN?
+GROUP BY?
+Aggregate functions?
+
+Show:
+
+Question
+Topic
+Difficulty
+Suggested Answer Points
+
+========================================================
+23. INTERVIEW SCORE
+========================================================
+
+Create a simple local evaluation system.
+
+User can enter an answer.
+
+Evaluate based on:
+
+- Keyword coverage
+- Minimum answer length
+- Presence of important concepts
+
+Return:
+
+Answer Score
+Key Concepts Covered
+Missing Concepts
+Improvement Suggestions
+
+Do NOT claim this is an LLM-powered semantic evaluation.
+
+Clearly label it:
+
+"Rule-based prototype evaluation"
+
+========================================================
+24. ANALYTICS DASHBOARD
+========================================================
+
+Create a professional results dashboard.
+
+Top cards:
+
+ATS Score
+Skill Match
+Resume-JD Similarity
+ANN Suitability
+Overall Score
+
+Charts:
+
+1. ATS component breakdown
+2. Matched vs Missing Skills
+3. Skill Match bar chart
+4. Model feature importance
+5. Candidate ranking
+6. Career role match
+
+Use Recharts.
+
+========================================================
+25. RESULTS PAGE
+========================================================
+
+Create:
+
+/results
+
+Display:
+
+--------------------------------
+TALENTLENS AI ANALYSIS
+--------------------------------
+
+Candidate Name
+
+ATS SCORE
+82/100
+
+SKILL MATCH
+86%
+
+RESUME-JD SIMILARITY
+79%
+
+ANN SUITABILITY
+87%
+
+OVERALL SCORE
+84%
+
+--------------------------------
+
+MATCHED SKILLS
+
+Python
+SQL
+Machine Learning
+
+--------------------------------
+
+MISSING SKILLS
+
+TensorFlow
+Docker
+NLP
+
+--------------------------------
+
+ATS BREAKDOWN
+
+Skill Match
+Keyword Match
+Similarity
+Section Completeness
+Project Relevance
+
+--------------------------------
+
+CAREER RECOMMENDATIONS
+
+AI/ML Engineer — 91%
+Data Scientist — 84%
+Data Analyst — 72%
+
+--------------------------------
+
+INTERVIEW PREPARATION
+
+Relevant Questions
+
+--------------------------------
+
+========================================================
+26. DATABASE
+========================================================
+
+Use SQLAlchemy.
+
+Create models:
+
+Candidate
+Resume
+JobDescription
+Skill
+ResumeAnalysis
+AnalysisResult
+InterviewAttempt
+
+Store:
+
+Candidate information
+Resume filename
+Resume text
+Job description
+Scores
+Matched skills
+Missing skills
+Predictions
+Career recommendations
+Interview attempts
+
+========================================================
+27. API DESIGN
+========================================================
+
+Create FastAPI routes:
+
+GET /api/health
+
+POST /api/resume/upload
+
+POST /api/analyze
+
+POST /api/candidates/analyze
+
+POST /api/candidates/rank
+
+POST /api/candidates/compare
+
+GET /api/analysis/{analysis_id}
+
+GET /api/career/recommendations/{analysis_id}
+
+GET /api/interview/questions
+
+POST /api/interview/evaluate
+
+POST /api/model/train
+
+GET /api/model/metrics
+
+GET /api/model/feature-importance
+
+========================================================
+28. FRONTEND ROUTES
+========================================================
+
+Create:
+
+/
+/analyze
+/results
+/recruiter
+/recruiter/compare
+/interview
+/career
+/model-performance
+/about
+
+Use React Router.
+
+========================================================
+29. COMPONENTS
+========================================================
+
+Create reusable components:
+
+Navbar
+Sidebar
+ScoreCard
+CircularScore
+SkillBadge
+SkillSection
+UploadBox
+JobDescriptionInput
+AnalysisProgress
+ATSBreakdown
+SkillGapChart
+CandidateTable
+CandidateComparison
+CareerCard
+InterviewCard
+ModelMetrics
+FeatureImportanceChart
+LoadingSpinner
+ErrorMessage
+Footer
+
+========================================================
+30. DESIGN
+========================================================
+
+Design must look like a modern AI SaaS product.
+
+Use:
+
+- Professional typography
+- Clean cards
+- Rounded corners
+- Subtle shadows
+- Good spacing
+- Responsive layout
+- Professional dashboard
+- Light/dark mode if practical
+- Accessible buttons
+- Clear status indicators
+- Skill badges
+- Progress bars
+
+Do not overuse animations.
+
+The application should look suitable for a final-year portfolio and LinkedIn project demonstration.
+
+========================================================
+31. ERROR HANDLING
+========================================================
+
+Handle:
+
+Invalid file
+Unsupported format
+Empty resume
+Large file
+Empty JD
+Parsing failure
+NLP failure
+Model failure
+Database failure
+Missing model
+
+Show user-friendly errors.
+
+Never expose raw stack traces to users.
+
+========================================================
+32. SECURITY
+========================================================
+
+Implement basic security:
+
+- Validate uploaded file type
+- Limit upload size
+- Sanitize filenames
+- Never execute uploaded files
+- Never expose server filesystem
+- Validate API inputs
+
+========================================================
+33. PROJECT STRUCTURE
+========================================================
+
+Use:
+
+talentlens-ai/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   │
+│   ├── routes/
+│   │   ├── resume.py
+│   │   ├── analysis.py
+│   │   ├── candidates.py
+│   │   ├── interview.py
+│   │   └── career.py
+│   │
+│   ├── services/
+│   │   ├── resume_parser.py
+│   │   ├── nlp_processor.py
+│   │   ├── skill_extractor.py
+│   │   ├── similarity.py
+│   │   ├── ats_scorer.py
+│   │   └── career_recommender.py
+│   │
+│   └── ml/
+│       ├── train_model.py
+│       ├── random_forest_model.py
+│       ├── ann_model.py
+│       ├── predict.py
+│       └── ann_predict.py
+│
+├── data/
+│   ├── candidate_training_data.csv
+│   ├── skills.json
+│   └── interview_questions.json
+│
+├── models/
+│
+├── uploads/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+└── .replit
+
+========================================================
+34. README
+========================================================
+
+Create a professional GitHub README.
+
+Include:
+
+Project Title
+Project Overview
+Problem Statement
+Solution
+Key Features
+Architecture
+NLP Pipeline
+Machine Learning Methodology
+ANN Architecture
+ATS Scoring Formula
+Candidate Ranking Formula
+Tech Stack
+Database
+API Documentation
+Project Structure
+Installation
+How to Run
+Screenshots placeholders
+Future Enhancements
+Limitations
+Ethical Considerations
+
+Future enhancements should mention:
+
+- LLM-based interview assistant
+- RAG-based career assistant
+- Vector database
+- Multi-agent recruitment workflow
+- Real job-market integration
+
+But DO NOT implement these features now.
+
+========================================================
+35. ETHICAL DISCLAIMER
+========================================================
+
+Show this in About page and README:
+
+"TalentLens AI is an academic/prototype recruitment intelligence system. Its scores and predictions are designed for demonstration and career assistance only. The system should not be used as the sole basis for real-world employment decisions."
+
+========================================================
+36. REPLIT CONFIGURATION
+========================================================
+
+Make the project fully runnable on Replit.
+
+Create appropriate:
+
+.replit
+
+requirements.txt
+
+package.json
+
+Configure backend to use:
+
+0.0.0.0
+
+and PORT environment variable.
+
+The project must be deployable.
+
+========================================================
+37. TESTING
+========================================================
+
+Create basic tests for:
+
+Resume parser
+NLP processor
+Skill extraction
+TF-IDF similarity
+ATS calculation
+ML prediction
+ANN prediction
+Career recommendation
+
+Test important API endpoints.
+
+========================================================
+38. FINAL QUALITY REQUIREMENT
+========================================================
+
+Do NOT stop after generating the files.
+
+Actually run the project.
+
+Check:
+
+1. Frontend starts
+2. Backend starts
+3. API connects
+4. Resume upload works
+5. PDF parsing works
+6. DOCX parsing works
+7. NLP works
+8. Skill extraction works
+9. TF-IDF works
+10. Cosine similarity works
+11. ATS score works
+12. Random Forest trains
+13. ANN trains
+14. Predictions work
+15. Recruiter ranking works
+16. Career recommendation works
+17. Interview module works
+18. Database works
+19. Charts render
+20. No major runtime errors
+
+Fix all errors you encounter.
+
+========================================================
+39. IMPORTANT — NO FAKE AI
+========================================================
+
+Do not create fake AI functionality.
+
+If a feature cannot be implemented without an external LLM/API, implement a transparent rule-based or ML alternative.
+
+Do not write:
+
+"Powered by AI"
+
+unless there is actual AI/ML functionality behind it.
+
+Use actual:
+
+NLP
+TF-IDF
+Cosine Similarity
+Random Forest
+ANN
+
+========================================================
+40. FINAL OUTPUT
+========================================================
+
+After implementation, provide:
+
+1. Project overview
+2. How to run
+3. Main URLs
+4. Important files
+5. ML models used
+6. NLP techniques used
+7. Database used
+8. Test instructions
+9. Known limitations
+
+Most importantly:
+
+MAKE THE COMPLETE PROJECT FUNCTIONAL AND RUNNABLE ON REPLIT.
+
+Do not merely create a mockup.
+
+Build the complete TalentLens AI application now.

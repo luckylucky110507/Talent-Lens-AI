@@ -1,0 +1,21 @@
+[
+  {"id":"python-1","category":"Python","difficulty":"Easy","question":"What is list comprehension and when would you use it?","points":["compact iteration","filtering with a condition","readability tradeoff"]},
+  {"id":"python-2","category":"Python","difficulty":"Medium","question":"Explain the difference between a list and a tuple.","points":["mutability","performance","use cases"]},
+  {"id":"python-3","category":"Python","difficulty":"Medium","question":"How does exception handling work in Python?","points":["try/except","specific exceptions","finally or cleanup"]},
+  {"id":"sql-1","category":"SQL","difficulty":"Easy","question":"What is the difference between WHERE and HAVING?","points":["WHERE filters rows","HAVING filters groups","aggregation timing"]},
+  {"id":"sql-2","category":"SQL","difficulty":"Medium","question":"Compare INNER JOIN and LEFT JOIN.","points":["matching rows","all left rows","null values"]},
+  {"id":"sql-3","category":"SQL","difficulty":"Easy","question":"Why is GROUP BY used with aggregate functions?","points":["grouping records","COUNT/SUM/AVG","one result per group"]},
+  {"id":"ml-1","category":"Machine Learning","difficulty":"Easy","question":"What is overfitting and how can you reduce it?","points":["training performance","generalization","regularization or validation"]},
+  {"id":"ml-2","category":"Machine Learning","difficulty":"Medium","question":"What is the difference between precision and recall?","points":["false positives","false negatives","classification context"]},
+  {"id":"ml-3","category":"Machine Learning","difficulty":"Medium","question":"What is Random Forest and why does it work well?","points":["ensemble","decision trees","bagging or feature randomness"]},
+  {"id":"ml-4","category":"Machine Learning","difficulty":"Hard","question":"Why is feature scaling required for some algorithms?","points":["feature magnitudes","distance or gradient","standardization"]},
+  {"id":"ml-5","category":"Machine Learning","difficulty":"Medium","question":"What is cosine similarity and where is it useful?","points":["vector angle","text similarity","normalized dot product"]},
+  {"id":"nlp-1","category":"NLP","difficulty":"Easy","question":"What is TF-IDF?","points":["term frequency","inverse document frequency","important terms"]},
+  {"id":"nlp-2","category":"NLP","difficulty":"Medium","question":"Why do NLP pipelines remove stopwords and lemmatize text?","points":["noise reduction","normalizing word forms","task-dependent tradeoff"]},
+  {"id":"dl-1","category":"Deep Learning","difficulty":"Easy","question":"What is an artificial neural network?","points":["layers","weighted connections","learned parameters"]},
+  {"id":"dl-2","category":"Deep Learning","difficulty":"Medium","question":"Why is ReLU commonly used in hidden layers?","points":["non-linearity","gradient behavior","computational simplicity"]},
+  {"id":"dl-3","category":"Deep Learning","difficulty":"Medium","question":"What is backpropagation?","points":["loss gradient","chain rule","weight updates"]},
+  {"id":"analytics-1","category":"Data Analytics","difficulty":"Easy","question":"How would you validate a dashboard metric before sharing it?","points":["source verification","definition consistency","edge cases"]},
+  {"id":"stats-1","category":"Statistics","difficulty":"Medium","question":"What is the difference between correlation and causation?","points":["association","confounding variables","experimental evidence"]},
+  {"id":"hr-1","category":"HR","difficulty":"Easy","question":"Tell me about a project where you had to learn a new technical skill.","points":["context","learning process","measurable outcome"]}
+]

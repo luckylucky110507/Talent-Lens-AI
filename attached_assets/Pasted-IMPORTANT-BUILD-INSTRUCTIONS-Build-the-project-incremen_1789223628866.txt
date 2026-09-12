@@ -1,0 +1,60 @@
+IMPORTANT BUILD INSTRUCTIONS:
+
+Build the project incrementally but complete the full V1.
+
+First create the complete folder structure and install all required dependencies.
+
+Then implement the backend services and APIs.
+
+Then implement the ML and ANN training/prediction pipeline.
+
+Then implement the React frontend and connect it to the FastAPI backend.
+
+After implementation:
+
+1. Run the backend and frontend.
+2. Test every major API endpoint.
+3. Test resume upload with PDF and DOCX.
+4. Test resume-JD analysis.
+5. Test TF-IDF and cosine similarity.
+6. Test ATS scoring.
+7. Test Random Forest prediction and metrics.
+8. Test ANN prediction.
+9. Test career recommendations.
+10. Test interview question generation and rule-based evaluation.
+11. Test recruiter ranking and comparison.
+12. Fix all runtime, import, dependency, API, CORS and frontend errors.
+
+IMPORTANT:
+
+- Do not create fake/demo UI values for analysis results.
+- All displayed analysis scores must come from actual implemented calculations.
+- Do not hardcode model evaluation metrics.
+- If a model has not been trained yet, automatically train it or provide a clear "Model not trained" state instead of fake metrics.
+- Generate the synthetic training dataset programmatically and save it as CSV.
+- Make the application work even if NLTK resources are not already installed by downloading required resources during setup or providing a safe fallback.
+- Make sure TensorFlow installation is compatible with the Replit Python environment.
+- Keep the application functional without any external API key.
+- Do not add OpenAI, Gemini, Claude, RAG, LangChain, vector databases or multi-agent functionality.
+- Do not claim that the system uses LLM-based reasoning.
+- Clearly label synthetic-data ML/ANN predictions as academic prototype predictions.
+- Use environment variables for configurable settings.
+- Configure CORS correctly for local development and deployment.
+- Make frontend API base URL configurable through an environment variable.
+- Make sure the backend listens on 0.0.0.0 and uses the PORT environment variable.
+- Create a working README with exact setup and run commands.
+
+Most importantly:
+DO NOT stop after creating the UI.
+The backend, NLP pipeline, ML models, ANN, database, APIs and frontend must actually be connected and functional.
+
+After finishing, provide:
+
+1. Project structure
+2. Dependencies installed
+3. How to run the application
+4. Backend URL
+5. Frontend URL
+6. Test results
+7. Any remaining issues
+8. Exact files that were created or modified
