@@ -1,6 +1,6 @@
 run = "npm run build && python -m uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-5000}"
 entrypoint = "backend/main.py"
-modules = ["nodejs-24", "python-base-3.13"]
+modules = ["python-3.12"]
 
 [deployment]
 run = ["sh", "-c", "npm run build && python -m uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-5000}"]
@@ -36,3 +36,6 @@ externalPort = 80
 [nix]
 channel = "stable-25_05"
 packages = ["freetype", "glibcLocales", "libxcrypt"]
+
+[agent]
+expertMode = true
